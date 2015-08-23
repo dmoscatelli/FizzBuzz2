@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script src="js/jquery-2.1.4.js"></script>
+</head>
+<body>
+
+	<div class="Fizzme"></div>
+
+
+	<script>
+
+
+		function countme(number) {
+
+			number = parseInt(number);
+
+
+
+			for (var i =1; i < number + 1; i++)	{
+					if (i % 3 == 0 && i % 5 == 0) {
+							$(".Fizzme").append("<li>FizzBuzz</li>");
+						} else if (i % 3 == 0) {
+							$(".Fizzme").append("<li>Buzz</li>"); 
+						} else if (i % 5 == 0) {
+							$(".Fizzme").append("<li>Fizz</li>");
+						} else {
+							$(".Fizzme").append("<li>" + i +   "</li>");
+						}
+					}	
+			};
+
+		countme(prompt("enter a number"));
+
+	</script>
+	
+</body>
+</html>
